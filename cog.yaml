@@ -1,0 +1,12 @@
+# Configuration for Cog ⚙️
+# Reference: https://cog.run/yaml
+
+build:
+  gpu: false
+  python_version: "3.10"
+  python_packages:
+    - "torch"
+    - "transformers==4.43.3"
+
+# predict.py defines how predictions are run on your model
+predict: "predict.py:Predictor"
