@@ -6,16 +6,20 @@ import json
 import torch
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
+HF_TOKEN = "hf_"
+
 class Predictor(BasePredictor):
     def setup(self) -> None:
         """Load the model into memory to make running multiple predictions efficient"""
         self.model = AutoModelForSequenceClassification.from_pretrained(
             'meta-llama/Prompt-Guard-86M',
             cache_dir="checkpoints",
+            token=HF_TOKEN
         )
         self.tokenizer = AutoTokenizer.from_pretrained(
             'meta-llama/Prompt-Guard-86M',
             cache_dir="checkpoints",
+            token=HF_TOKEN
         )
 
     def predict(
