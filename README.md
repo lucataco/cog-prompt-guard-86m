@@ -4,7 +4,7 @@ This is an implementation of the [meta-llama/Prompt-Guard-86M](https://huggingfa
 
 # Weights
 If you are testing locally, to download the weights you need to add your Huggingface Auth token in `preidct.py` on line 9.
-After you run a prediction, which downloads the weights, you can remove your token
+After you run a prediction (which downloads the weights) you can remove your token
 
 ## Run a prediction:
 
